@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Header from './components/header/Header';
+import Sidebar from './components/sidebar/Sidebar';
 
 function App() {
   return (
@@ -7,8 +9,13 @@ function App() {
     <div className="App">
       <h1>Hello</h1>
       {/*Header */}
-      {/*Sidebar */}
-      {/*React-router */}
+      <Header />
+      <div className="app_body">
+        {/*Sidebar */}
+        <Sidebar />
+        {/*React-router */}
+      </div>
+
     </div>
   );
 }
