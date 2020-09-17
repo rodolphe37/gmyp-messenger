@@ -25,8 +25,8 @@ export default function Login() {
   return (
     <div className="login">
       <div className="login_container">
-        <img src={require('../../assets/images/logo.png')} alt='logo' />
-        <h1>Sign in to GmyP Messenger</h1>
+        <img src={require('../../assets/images/icon_slack.png')} alt='logo' />
+        <h1>Sign in to My Slack</h1>
         <p>It's great!!</p>
         <Button onClick={signIn}>Sign In With Google</Button>
       </div>
