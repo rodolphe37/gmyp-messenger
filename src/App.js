@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import Sidebar from './components/sidebar/Sidebar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Chat from './components/chat/Chat'
 
 function App() {
   return (
@@ -16,8 +17,7 @@ function App() {
           <Sidebar />
           <Switch>
             <Route path="/room/:roomId">
-              <h1>CHAT SCREEN</h1>
-              {/*<Chat />*/}
+              <Chat />
             </Route>
             <Route path="/">
               <h1>Welcome</h1>
