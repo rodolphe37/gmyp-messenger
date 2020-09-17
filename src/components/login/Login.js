@@ -6,6 +6,7 @@ import { useStateValue } from '../../StateProvider';
 import { actionTypes } from '../../reducer';
 
 export default function Login() {
+  // eslint-disable-next-line
   const [state, dispatch] = useStateValue();
 
   const signIn = () => {

@@ -8,10 +8,9 @@ import Login from './components/login/Login';
 import { useStateValue } from './StateProvider';
 
 function App() {
-  // const [user, setUser] = useState(null)
+  // eslint-disable-next-line
   const [{ user }, dispatch] = useStateValue();
   return (
-    // BEM  naming convention
     <div className="App">
       <Router>
         {!user ? (
