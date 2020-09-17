@@ -5,25 +5,12 @@ import './sidebar.css';
 import SidebarOption from '../sidebarOption/SidebarOption';
 import { Apps, ExpandLess, FileCopy, PeopleAlt, InsertComment, Inbox, Drafts, BookmarkBorder, ExpandMore, Add } from '@material-ui/icons';
 import db from '../../firebase'
+import { useStateValue } from '../../StateProvider';
 
 function Sidebar() {
   const [channels, setChannels] = useState([])
+  const [{ user }] = useStateValue();
 
-
-  // useEffect(() => {
-  //   const unsubscibe = db.collection("rooms").onSnapshot((snapshot) =>
-  //     setChannels(
-  //       snapshot.docs.map((doc) => ({
-  //         id: doc.id,
-  //         data: doc.data().name
-  //       }))
-  //     )
-  //   );
-
-  //   return () => {
-  //     unsubscibe();
-  //   }
-  // }, [])
   useEffect(() => {
     // Run this code ONCE when the sidebar component load
     db.collection('rooms').onSnapshot((snapshot) =>
@@ -42,7 +29,7 @@ function Sidebar() {
           <h2>Developers</h2>
           <h3>
             <FiberManualRecord />
-            rodolphe Augusto
+            {user?.displayName}
           </h3>
         </div>
         <CreateIcon />
